@@ -25,7 +25,7 @@ const app = express();
 //Cors
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://soulclubniftyzone.netlify.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     allowedHeaders: ["Content-Type"],
