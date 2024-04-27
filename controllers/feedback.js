@@ -3,8 +3,8 @@ const Feedback = require("../model/feedbackSchema");
 const addFeedback = async (req, res) => {
   const { username, comment, rating } = req.body;
 
-  console.log(req.body);
-  console.log(username, comment, rating);
+  // console.log(req.body);
+  // console.log(username, comment, rating);
   if (!username || !comment || !rating) {
     return res.status(422).json({ message: "fields required" });
   }

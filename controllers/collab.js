@@ -32,7 +32,7 @@ const updateCollabStatus = async (req, res) => {
     // res.json(updatedCollabRequest);
     res.status(201).send({ message: "Collab updated", updatedCollabRequest });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
@@ -46,7 +46,7 @@ const deleteCollab = async (req, res) => {
       res.status(200).json({ message: "Collab deleted successfully" }); // Changed status code to 200
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };

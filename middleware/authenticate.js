@@ -10,8 +10,7 @@ const isSignin = async (req, res, next) => {
       process.env.JWT_SECRET_KEY
     );
     req.user = verifyToken;
-    console.log(verifyToken);
-   
+    // console.log(verifyToken);
 
     next();
   } catch (err) {

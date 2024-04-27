@@ -12,11 +12,8 @@ const User = require("../model/userSchema");
 const {
   registerController,
   signinController,
-  testController
-  
+  testController,
 } = require("../controllers/auth");
-
-
 
 //using Aysncronus programming
 
@@ -62,7 +59,7 @@ const transporter = nodemailer.createTransport(emailConfig);
 router.post("/forgot-password", async (req, res) => {
   try {
     const { userEmail } = req.body;
-    console.log(userEmail);
+    // console.log(userEmail);
     const user = await User.findOne({ email: userEmail });
 
     if (!user) {
@@ -88,7 +85,7 @@ router.post("/forgot-password", async (req, res) => {
         console.error("Email sending error:", error);
         return res.status(400).json({ message: "Email not sent" });
       }
-      console.log("Email sent:", info.response);
+      // console.log("Email sent:", info.response);
       res.json({ message: "Password reset email sent successfully" });
     });
   } catch (e) {

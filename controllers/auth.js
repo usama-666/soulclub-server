@@ -4,7 +4,7 @@ const User = require("../model/userSchema");
 
 const registerController = async (req, res) => {
   const { name, email, phone, password, cpassword } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     //validations
@@ -110,10 +110,7 @@ const signinController = async (req, res) => {
       error,
     });
   }
-  
 };
-
-
 
 ///Test Controller
 
@@ -124,7 +121,7 @@ const testController = (req, res) => {
       message: "protected route",
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.send({ error });
   }
 };

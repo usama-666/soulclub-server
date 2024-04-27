@@ -12,7 +12,7 @@ const {
 const Collab = require("../model/collabSchema");
 
 router.post("/collab", async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   const {
     project_name,
@@ -26,7 +26,6 @@ router.post("/collab", async (req, res) => {
     website,
     opensea,
   } = req.body;
-
 
   try {
     const usercollabExist = await Collab.findOne({
